@@ -3,7 +3,7 @@ import HeroStackedImages from './HeroStackedImages';
 import AboutStudio from './AboutStudio';
 import ResonanceStudio from './ResonanceStudio'
 import Contact from './ContactPart1'
-import PortfolioSection from './Portfoliosection';
+import PortfolioSection from './PortfolioSection';
 import Testimonial from './TestimonialCarousel';
 import Serivces from './ServicesLanding'
 import Hexa from './HexaSection'
@@ -36,7 +36,7 @@ function MainC() {
         <Contact/>
     </section>
 
-    
+
     
     {/* <ExitIntentPopup /> */}
     
