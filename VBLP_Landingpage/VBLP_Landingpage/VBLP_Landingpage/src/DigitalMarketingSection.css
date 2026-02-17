@@ -1,0 +1,474 @@
+/* ============ WRAPPER GRID (2 columns) ============ */
+.dm-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 56px;
+
+  display: grid;
+  grid-template-columns: 1.8fr 1.5fr;
+  gap: 28px;
+
+  font-family: system-ui, sans-serif;
+}
+
+/* ============ LEFT BIG IMAGE ============ */
+.dm-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+/* ============ RIGHT SIDE WRAPPER ============ */
+.dm-right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ============ TOP ROW ============ */
+.dm-top-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 22px;
+}
+
+/* LOGO CARD */
+.dm-logo-card {
+  padding: 32px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dm-logo-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 26px;
+}
+
+/* BUY PRINTS BUTTON */
+.dm-buy-btn {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #0666ff;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RIGHT SMALL IMAGE */
+.dm-small-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+/* ============ BOTTOM INFO CARD ============ */
+.dm-info-card {
+  padding: 32px;
+  border-radius: 26px;
+  background: #ffe7ba;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.18);
+}
+
+.dm-info-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.dm-info-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* CONNECT BUTTON */
+.dm-connect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 52px;
+  padding: 0 36px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #ffb31f;
+  color: #000;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+/* Arrow appears on hover (before text) */
+.strategy-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 48px;
+  padding: 0 32px 0 80px;
+
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #061728;
+
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* === SMALL CIRCLE (initial) === */
+.strategy-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 26px;
+  transform: translateY(-50%);
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  background: linear-gradient(90deg, #ffdd6b, #ff8a6a);
+  box-shadow: 0 10px 22px rgba(255, 140, 90, 0.55);
+
+  transition: width 0.35s ease, border-radius 0.35s ease, box-shadow 0.35s ease;
+  z-index: 0;
+}
+
+/* === ON HOVER: Expand into a rounded pill (keeps round right) === */
+.strategy-btn:hover::before {
+  width: 260px; /* fixed width keeps pill shape */
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(255, 140, 90, 0.65);
+}
+
+/* === TEXT === */
+.strategy-btn__label {
+  position: relative;
+  z-index: 1;
+}
+
+/* === ARROW (initially hidden) === */
+.strategy-btn__arrow {
+  position: absolute;
+  top: 50%;
+  left: 43px;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+
+  opacity: 0;
+  z-index: 1;
+
+  transition: opacity 0.2s ease, left 0.35s ease;
+}
+
+/* === ARROW APPEARS & SLIDES === */
+.strategy-btn:hover .strategy-btn__arrow {
+  opacity: 1;
+  left: 62px;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 992px) {
+  .dm-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dm-top-row {
+    grid-template-columns: 1fr;
+  }
+}
+/* ============ WRAPPER GRID (2 columns) ============ */
+.dm-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 56px;
+
+  display: grid;
+  grid-template-columns: 1.8fr 1.5fr;
+  gap: 28px;
+
+  font-family: system-ui, sans-serif;
+}
+
+/* ============ LEFT BIG IMAGE ============ */
+.dm-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+/* ============ RIGHT SIDE WRAPPER ============ */
+.dm-right {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ============ TOP ROW ============ */
+.dm-top-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 22px;
+}
+
+/* LOGO CARD */
+.dm-logo-card {
+  padding: 32px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.18);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dm-logo-img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 26px;
+}
+
+/* BUY PRINTS BUTTON */
+.dm-buy-btn {
+  width: 100%;
+  height: 52px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #0666ff;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RIGHT SMALL IMAGE */
+.dm-small-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+}
+
+/* ============ BOTTOM INFO CARD ============ */
+.dm-info-card {
+  padding: 32px;
+  border-radius: 26px;
+  background: #ffe7ba;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.18);
+}
+
+.dm-info-card h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.dm-info-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* CONNECT BUTTON */
+.dm-connect-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 52px;
+  padding: 0 36px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #ffb31f;
+  color: #000;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+/* Arrow appears on hover (before text) */
+.strategy-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  height: 48px;
+  padding: 0 32px 0 80px;
+  border-radius: 999px; /* <-- keeps right side round */
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+
+  font-family: system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #061728;
+
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* === SMALL CIRCLE (initial) === */
+.strategy-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 26px;
+  transform: translateY(-50%);
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  background: linear-gradient(90deg, #ffdd6b, #ff8a6a);
+  box-shadow: 0 10px 22px rgba(255, 140, 90, 0.55);
+
+  transition: width 0.35s ease, border-radius 0.35s ease, box-shadow 0.35s ease;
+  z-index: 0;
+}
+
+/* === ON HOVER: Expand into a rounded pill (keeps round right) === */
+.strategy-btn:hover::before {
+  width: 260px; /* fixed width keeps pill shape */
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(255, 140, 90, 0.65);
+}
+
+/* === TEXT === */
+.strategy-btn__label {
+  position: relative;
+  z-index: 1;
+}
+
+/* === ARROW (initially hidden) === */
+.strategy-btn__arrow {
+  position: absolute;
+  top: 50%;
+  left: 43px;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+
+  opacity: 0;
+  z-index: 1;
+
+  transition: opacity 0.2s ease, left 0.35s ease;
+}
+
+/* === ARROW APPEARS & SLIDES === */
+.strategy-btn:hover .strategy-btn__arrow {
+  opacity: 1;
+  left: 62px;
+}
+/* ============ RESPONSIVE DESIGN ============ */
+/* ============ RESPONSIVE DESIGN ============ */
+@media (max-width: 992px) {
+  .dm-wrapper {
+    grid-template-columns: 1fr;
+    padding: 28px 16px 40px;
+    gap: 24px;
+  }
+}
+
+/* PHONE / VERY SMALL (e.g. 320px) */
+@media (max-width: 640px) {
+  .dm-top-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .dm-logo-card,
+  .dm-info-card {
+    padding: 20px 18px;
+  }
+
+  /* --- FORCE SMALLER IMAGE HEIGHTS --- */
+
+  /* big left image wrapper: fix height & crop */
+  .dm-left {
+    height: 200px; /* <= change this if you want shorter/taller */
+    border-radius: 26px;
+    overflow: hidden;
+  }
+
+  .dm-left img {
+    width: 100%;
+    height: 100%; /* fills the 200px container */
+    object-fit: cover; /* crops instead of stretching */
+  }
+
+  /* right/top small image: also clamp height */
+  .dm-small-img {
+    width: 100%;
+    height: 180px; /* clamp height */
+    object-fit: cover;
+    border-radius: 26px;
+  }
+
+  .dm-info-card h2 {
+    font-size: 22px;
+  }
+
+  .dm-info-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 350px) {
+  .dm-left img {
+    width: 250px;
+    height: 100%; /* fills the 200px container */
+    object-fit: cover; /* crops instead of stretching */
+  }
+  .dm-small-img {
+    width: 250px;
+    height: 180px; /* clamp height */
+    object-fit: cover;
+    border-radius: 26px;
+  }
+  .dm-logo-card,
+  .dm-info-card {
+    padding: 20px 18px;
+    width: 250px;
+  }
+}
