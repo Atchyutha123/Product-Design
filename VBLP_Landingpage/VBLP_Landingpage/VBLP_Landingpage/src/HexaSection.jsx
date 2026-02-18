@@ -118,7 +118,7 @@ const HexaSection = () => {
 
         {/* Subtitle */}
         <motion.p className="hexapart2-subtitle" variants={itemVariants}>
-          SMART Group partners with forward-thinking leaders to create<br />
+          VBLP Tech Solutions partners with forward-thinking leaders to create<br />
           solutions that eliminate repetitive tasks and unlock new opportunities.
         </motion.p>
 
