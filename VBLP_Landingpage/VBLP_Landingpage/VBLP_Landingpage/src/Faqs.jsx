@@ -7,11 +7,11 @@ const Faqs = () => {
 
   const faqs = [
     {
-      q: "Why choose VBLP Tech Solutions for branding services in Hyderabad?",
-      a: "With over 10 years of experience, VBLP Tech Solutions is recognized as the best brand design company in Hyderabad. We offer end-to-end branding solutions including logo design, brand strategy, visual identity, and brand guidelines. Our team of creative experts ensures your brand stands out in the competitive market with unique and memorable designs.",
+      q: "Why choose VBLP Tech Solutions Pvt. Ltd. for branding services in Hyderabad?",
+      a: "With over 10 years of experience, VBLP Tech Solutions Pvt. Ltd. is recognized as the best brand design company in Hyderabad. We offer end-to-end branding solutions including logo design, brand strategy, visual identity, and brand guidelines. Our team of creative experts ensures your brand stands out in the competitive market with unique and memorable designs.",
     },
     {
-      q: "What branding services does VBLP Tech Solutions offer?",
+      q: "What branding services does VBLP Tech Solutions Pvt. Ltd. offer?",
       a: "We provide comprehensive branding services including: Logo Design & Identity, Brand Strategy & Positioning, Visual Identity Systems, Brand Guidelines, Packaging Design, Marketing Collateral, Digital Branding, Rebranding Services, and Brand Consultation. Each service is tailored to meet your specific business needs and target audience.",
     },
     {
@@ -19,7 +19,7 @@ const Faqs = () => {
       a: "Our branding packages start from affordable rates for startups to comprehensive enterprise solutions. The cost depends on your requirements, scope of work, and deliverables. We offer flexible pricing models and ensure maximum ROI for your branding investment. Contact us for a free consultation and customized quote.",
     },
     {
-      q: "What is the process of brand development at VBLP?",
+      q: "What is the process of brand development at VBLP Tech Solutions Pvt. Ltd.?",
       a: "Our brand development process includes: 1) Discovery & Research - Understanding your business, audience, and competition. 2) Strategy - Defining brand positioning, personality, and messaging. 3) Design - Creating visual elements like logo, colors, and typography. 4) Implementation - Applying brand across all touchpoints. 5) Management - Ongoing support and brand evolution.",
     },
     {

@@ -129,7 +129,7 @@ const Hero = () => {
             Complete Branding Services for a Stronger Identity
           </h1>
           <p className="hero-subtitle">
-            At VBLP Tech Solutions, we help you build a memorable brand identity from the ground up. From logo design to motion graphics, digital strategy, and beyond—our expert team delivers visual consistency and marketing clarity across every touchpoint.
+            At VBLP Tech Solutions Pvt. Ltd., we help you build a memorable brand identity from the ground up. From logo design to motion graphics, digital strategy, and beyond—our expert team delivers visual consistency and marketing clarity across every touchpoint.
           </p>
           
           <div className="hero-buttons">
