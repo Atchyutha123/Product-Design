@@ -94,11 +94,11 @@ const Footer = () => {
               CALL US DIRECTLY(INDIA)
             </p>
             <a
-              href="tel:+91830939566"
+              href="tel:+918309390566"
               className="contact-link"
               style={{ padding: "5px 5px" }}
             >
-              +91 830939566
+              +91 8309390566
             </a>
 
             <p className="contact-label" style={{ margin: "0px" }}>

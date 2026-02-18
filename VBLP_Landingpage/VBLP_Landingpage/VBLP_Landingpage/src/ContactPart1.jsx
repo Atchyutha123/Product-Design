@@ -96,7 +96,7 @@ export default function ContactPart1() {
                 </div>
                 <div>
                   <div className="info-label">Call Us</div>
-                  <div className="info-value">830939566</div>
+                  <div className="info-value">8309390566</div>
                 </div>
               </div>
 
