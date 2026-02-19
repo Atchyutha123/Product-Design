@@ -76,11 +76,10 @@ export default function ContactPart1() {
               </div>
               
               <h1 className="main-heading">
-                Let's create something amazing together
+                Work with the Best Branding Agency in <span style={{color: '#f59e0b'}}>Hyderabad</span>
               </h1>
               <p className="subheading">
-                Ready to transform your brand? We're here to help you build 
-                something extraordinary. Reach out and let's start the conversation.
+                Ready to grow your business with professional branding services? <span style={{color: '#f59e0b'}}>VBLP Tech Solutions Pvt. Ltd</span>. offers <strong>logo design, brochure design, motion graphics, and complete digital branding solutions</strong> in <span style={{color:"#f59e0b"}}>Hyderabad</span>. Let’s build a powerful brand identity together.
               </p>
             </motion.div>
 
@@ -136,10 +135,10 @@ export default function ContactPart1() {
               >
                 <CheckCircle2 size={64} color="#22c55e" style={{marginBottom: '1rem'}} />
                 <h3 style={{fontSize: '1.5rem', fontWeight: 700, color: '#166534', marginBottom: '0.5rem'}}>
-                  Message Sent!
+                  Request Received Successfully!
                 </h3>
                 <p style={{color: '#15803d', fontSize: '1rem'}}>
-                  Thank you for reaching out. We'll get back to you within 24 hours.
+                  Thank you for contacting <span style={{color: '#f59e0b'}}>VBLP Tech Solutions Pvt. Ltd</span>. Our branding experts will connect with you within 24 hours.
                 </p>
               </motion.div>
             ) : (
@@ -152,9 +151,9 @@ export default function ContactPart1() {
                 style={{width: '100%'}}
               >
                 <div className="form-header">
-                  <h2 className="form-heading">Send us a message</h2>
+                  <h2 className="form-heading">Start Your Branding Project Today</h2>
                   <p className="form-subheading">
-                    Tell us about your project and we'll get back to you shortly.
+                    Tell us about your branding requirements and our Hyderabad team will respond quickly with the best solution.
                   </p>
                 </div>
 
@@ -232,7 +231,7 @@ export default function ContactPart1() {
                     </label>
                     <textarea
                       name="message"
-                      placeholder="Tell us about your project requirements, timeline, and any specific needs..."
+                      placeholder="Describe your branding needs – logo design, brochure design, motion graphics, website branding, or complete digital branding services..."
                       value={formState.message}
                       onChange={handleChange}
                       required
@@ -261,7 +260,7 @@ export default function ContactPart1() {
                       </>
                     ) : (
                       <>
-                        Send Message
+                        Get Free Branding Consultation
                         <ArrowRight size={20} />
                       </>
                     )}
@@ -274,7 +273,7 @@ export default function ContactPart1() {
                     color: '#94a3b8',
                     lineHeight: 1.5,
                   }}>
-                    By submitting this form, you agree to our Privacy Policy and Terms of Service.
+                    By submitting this form, you agree to be contacted by <span style={{color: '#f59e0b'}}>VBLP Tech Solutions Pvt. Ltd.</span> regarding branding services in <span style={{color:"#f59e0b"}}>Hyderabad</span>.
                   </p>
                 </form>
               </motion.div>

@@ -25,93 +25,126 @@ import "./ServicesLanding.css";
 const allServices = [
   { 
     id: "01", 
-    title: "Logo Design", 
+    title: "Logo Design Services in Hyderabad", 
     img: "https://www.vblp.co.in/images/logo.jpg",
     icon: <Palette size={24} />,
-    description: "Crafting memorable brand identities that resonate with your audience and stand the test of time.",
-    features: ["Custom Logo Concepts", "Brand Guidelines", "Vector Files", "Unlimited Revisions"],
-    // price: "Starting at $999",
+    description: "As the best branding agency in Hyderabad, VBLP Tech Solutions Pvt. Ltd. creates professional logo designs that build strong and memorable brand identities.",
+    features: [
+      "Custom Logo Concepts",
+      "Brand Identity Development",
+      "Vector & Source Files",
+      "Multiple Revisions"
+    ],
     duration: "1-2 Days",
     color: "#FF6B6B"
   },
   { 
     id: "02", 
-    title: "Company Visual Identity", 
+    title: "Company Visual Identity Design", 
     img: "https://www.vblp.co.in/images/Visual.jpg",
     icon: <Layout size={24} />,
-    description: "Comprehensive visual systems that communicate your brand's essence across all touchpoints.",
-    features: ["Color Palette", "Typography System", "Brand Assets", "Style Guide"],
-    // price: "Starting at $2,499",
+    description: "We provide complete visual identity branding services in Hyderabad including color palette, typography, and brand guidelines for consistent brand presence.",
+    features: [
+      "Brand Style Guide",
+      "Typography System",
+      "Color Palette Design",
+      "Brand Asset Kit"
+    ],
     duration: "2-3 Days",
     color: "#4ECDC4"
   },
   { 
     id: "03", 
-    title: "Brochure Design", 
+    title: "Brochure Design Services", 
     img: "https://www.vblp.co.in/images/brochure.jpg",
     icon: <Layout size={24} />,
-    description: "Stunning print and digital brochures that tell your story with elegance and impact.",
-    features: ["Multi-page Layouts", "Print-Ready Files", "Digital Versions", "Custom Illustrations"],
-    // price: "Starting at $799",
-    duration: "1 Day",
+    description: "Professional brochure design services that communicate your business story clearly and enhance your marketing impact.",
+    features: [
+      "Corporate Brochures",
+      "Product Catalog Design",
+      "Print-Ready Files",
+      "Creative Layout Design"
+    ],
+    duration: "1-2 Days",
     color: "#45B7D1"
   },
   { 
     id: "04", 
-    title: "Motion Design", 
+    title: "Motion Graphics & Animation", 
     img: "https://www.vblp.co.in/images/animation.jpg",
     icon: <Video size={24} />,
-    description: "Dynamic animations that bring your brand to life and captivate your audience.",
-    features: ["2D Animation", "Logo Animation", "Explainer Videos", "Social Media Content"],
-    // price: "Starting at $1,499",
+    description: "Top digital branding services in Hyderabad including motion graphics and animation that make your brand visually powerful and engaging.",
+    features: [
+      "Logo Animation",
+      "2D Motion Graphics",
+      "Explainer Videos",
+      "Social Media Animations"
+    ],
     duration: "2-3 Days",
     color: "#96CEB4"
   },
   { 
     id: "05", 
-    title: "3D Animation", 
+    title: "3D Animation Services", 
     img: "https://ridda.starplatethemes.com/assets/images/services/service-timeline5.jpg",
     icon: <Box size={24} />,
-    description: "Immersive 3D experiences that push creative boundaries and elevate your brand.",
-    features: ["3D Modeling", "Product Visualization", "Character Animation", "VR/AR Ready"],
-    // price: "Starting at $3,999",
+    description: "High-quality 3D animation services that enhance product visualization and strengthen digital branding strategies.",
+    features: [
+      "3D Product Modeling",
+      "Architectural Visualization",
+      "3D Character Animation",
+      "Advanced Rendering"
+    ],
     duration: "3-4 Days",
     color: "#DDA0DD"
   },
   { 
     id: "06", 
-    title: "Website Branding", 
+    title: "Website Branding Solutions", 
     img: "https://www.vblp.co.in/images/brand.jpg",
     icon: <Globe size={24} />,
-    description: "Cohesive digital experiences that merge aesthetics with functionality seamlessly.",
-    features: ["UI/UX Design", "Responsive Design", "Design Systems", "Prototype Testing"],
-    // price: "Starting at $2,999",
+    description: "Complete website branding solutions combining UI/UX design with strategic digital branding to improve online visibility.",
+    features: [
+      "Responsive Website Design",
+      "UI/UX Branding",
+      "Landing Page Branding",
+      "Brand Consistency"
+    ],
     duration: "3-4 Days",
     color: "#FFD93D"
   },
   { 
     id: "07", 
-    title: "E-Commerce", 
+    title: "E-Commerce Branding & Development", 
     img: "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=600",
     icon: <ShoppingCart size={24} />,
-    description: "Conversion-focused online stores that turn visitors into loyal customers.",
-    features: ["Store Design", "Payment Integration", "Mobile Optimization", "Analytics Setup"],
-    // price: "Starting at $3,499",
+    description: "E-commerce branding services in Hyderabad designed to increase conversions and strengthen your digital presence.",
+    features: [
+      "Online Store Branding",
+      "Payment Integration",
+      "Mobile Optimization",
+      "Conversion Strategy"
+    ],
     duration: "4-6 Days",
     color: "#FF8C42"
   },
   { 
     id: "08", 
-    title: "Digital Strategy", 
+    title: "Digital Branding Strategy", 
     img: "https://www.vblp.co.in/images/statinary.jpg",
     icon: <TrendingUp size={24} />,
-    description: "Data-driven strategies that align your business goals with user needs.",
-    features: ["Market Research", "Competitor Analysis", "Growth Roadmap", "KPI Tracking"],
-    // price: "Starting at $1,999",
+    description: "Strategic digital branding services that help businesses in Hyderabad grow through data-driven marketing and brand positioning.",
+    features: [
+      "Market Research",
+      "Competitor Analysis",
+      "Brand Positioning Strategy",
+      "Growth Planning"
+    ],
     duration: "2-3 Days",
     color: "#6BCB77"
   },
 ];
+
 
 // Stagger Animation Variants
 const containerVariants = {
@@ -271,7 +304,7 @@ export default function ServicesLanding() {
           transition={{ duration: 0.6 }}
           className="serviceBadge"
         >
-          <Sparkles size={14} /> Our Expertise
+          <Sparkles size={14} /> Best Branding Services in Hyderabad
         </motion.span>
         <motion.h2 
           initial={{ opacity: 0, y: -20 }}
@@ -279,7 +312,7 @@ export default function ServicesLanding() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="serviceHeading"
         >
-          Creative & Modern Services
+          Top Digital Branding Services in <span style={{color:"#ff5722"}}>Hyderabad</span>
         </motion.h2>
       </div>
 
@@ -552,7 +585,7 @@ const ServicePopup = ({ service, onClose }) => {
 
               {/* Features List */}
               <div className="popupFeatures">
-                <h3>What's Included</h3>
+                <h3>What You Get With Our Branding Services</h3>
                 <div className="featuresList">
                   {service.features.map((feature, index) => (
                     <motion.div 

@@ -1,6 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import logo from "../public/logo.png";
+import logo from "../public/vblplogo.png";
 import "./CSS/Footer.css";
 import india from "../public/india.jpeg";
 import { Facebook, Instagram, Linkedin, X } from "lucide-react";
@@ -153,8 +153,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-left">
           <p>
-            © {new Date().getFullYear()} VBLP Tech Solutions. All Rights
-            Reserved.
+            © {new Date().getFullYear()} VBLP Tech Solutions Pvt. Ltd. All rights reserved.
           </p>
         </div>
 

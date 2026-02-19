@@ -7,11 +7,11 @@ const Faqs = () => {
 
   const faqs = [
     {
-      q: "Why choose VBLP Tech Solutions Pvt. Ltd. for branding services in Hyderabad?",
+      q: "Why choose VBLP Tech Solutions Pvt. Ltd. for branding services Hyderabad?",
       a: "With over 10 years of experience, VBLP Tech Solutions Pvt. Ltd. is recognized as the best brand design company in Hyderabad. We offer end-to-end branding solutions including logo design, brand strategy, visual identity, and brand guidelines. Our team of creative experts ensures your brand stands out in the competitive market with unique and memorable designs.",
     },
     {
-      q: "What branding services does VBLP Tech Solutions Pvt. Ltd. offer?",
+      q: "What we branding services does VBLP Tech Solutions Pvt. Ltd. offer?",
       a: "We provide comprehensive branding services including: Logo Design & Identity, Brand Strategy & Positioning, Visual Identity Systems, Brand Guidelines, Packaging Design, Marketing Collateral, Digital Branding, Rebranding Services, and Brand Consultation. Each service is tailored to meet your specific business needs and target audience.",
     },
     {
@@ -22,11 +22,6 @@ const Faqs = () => {
       q: "What is the process of brand development at VBLP Tech Solutions Pvt. Ltd.?",
       a: "Our brand development process includes: 1) Discovery & Research - Understanding your business, audience, and competition. 2) Strategy - Defining brand positioning, personality, and messaging. 3) Design - Creating visual elements like logo, colors, and typography. 4) Implementation - Applying brand across all touchpoints. 5) Management - Ongoing support and brand evolution.",
     },
-    {
-      q: "How long does it take to complete a branding project?",
-      a: "A typical branding project takes 4-8 weeks depending on complexity. Logo design takes 2-3 weeks, complete brand identity takes 4-6 weeks, and comprehensive rebranding projects may take 8-12 weeks. We ensure timely delivery without compromising on quality, keeping you involved at every stage.",
-    },
-    
   ];
 
   const toggleFAQ = (index) => {

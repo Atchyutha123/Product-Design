@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import Hamburger from "hamburger-react";
 import { Phone } from "lucide-react";
-import logoWhite from "../public/logo-white.png";
-import logoColor from "../public/logo.png";
+import logoWhite from "../public/vblplogo-white.png";
+import logoColor from "../public/vblplogo.png";
 import "./CSS/Navbar.css";
 import { HashLink } from "react-router-hash-link";
 

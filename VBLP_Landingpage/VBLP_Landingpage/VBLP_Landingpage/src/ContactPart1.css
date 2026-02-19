@@ -75,7 +75,7 @@
 }
 
 .main-heading {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: #0f172a;
   margin-bottom: 1rem;
@@ -314,7 +314,7 @@
   }
   
   .main-heading {
-    font-size: 3.5rem;
+    font-size: 3.0rem;
   }
   
   .form-heading {
@@ -337,7 +337,7 @@
   }
   
   .main-heading {
-    font-size: 2.75rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -405,7 +405,7 @@
   }
   
   .main-heading {
-    font-size: 2.25rem;
+    font-size: 1.75rem;
   }
   
   .subheading {
@@ -471,7 +471,7 @@
   }
   
   .main-heading {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 0.75rem;
   }
   
@@ -601,7 +601,7 @@
   }
   
   .main-heading {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   
   .badge {
@@ -698,7 +698,7 @@
   }
   
   .main-heading {
-    font-size: 1.375rem;
+    font-size: 1.25rem;
   }
   
   .badge {

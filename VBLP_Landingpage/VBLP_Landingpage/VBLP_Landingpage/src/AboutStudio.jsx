@@ -21,27 +21,28 @@ const AboutStudio = () => {
   };
 
   const features = [
-    { 
-      text: 'Product Strategy', 
-      icon: <Layers size={20} />, 
-      img: 'https://plus.unsplash.com/premium_photo-1721080250995-5a83519eb2a0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' 
-    },
-    { 
-      text: 'UX Research', 
-      icon: <Rocket size={20} />, 
-      img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop' 
-    },
-    { 
-      text: 'Interface Design', 
-      icon: <Monitor size={20} />, 
-      img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop' 
-    },
-    { 
-      text: 'Design Systems', 
-      icon: <Sparkles size={20} />, 
-      img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=600&auto=format&fit=crop' 
-    },
-  ];
+  { 
+    text: 'Step 01 – Brand Research & Strategy', 
+    icon: <Layers size={20} />, 
+    img: 'https://www.vblp.co.in/images/statinary.jpg' 
+  },
+  { 
+    text: 'Step 02 – Logo & Visual Identity Design', 
+    icon: <Rocket size={20} />, 
+    img: 'https://www.vblp.co.in/images/logo.jpg' 
+  },
+  { 
+    text: 'Step 03 – Marketing & Brand Collateral', 
+    icon: <Monitor size={20} />, 
+    img: 'https://www.vblp.co.in/images/brochure.jpg' 
+  },
+  { 
+    text: 'Step 04 – Digital Branding & Launch', 
+    icon: <Sparkles size={20} />, 
+    img: 'https://www.vblp.co.in/images/animation.jpg' 
+  },
+];
+
 
   return (
     <section className="aboutSection">
@@ -106,15 +107,15 @@ const AboutStudio = () => {
         {/* RIGHT SIDE: Text Content */}
         <div className="contentArea">
           <motion.div variants={itemVariants} className="badge">
-            <Sparkles size={14} className="icon-spin" /> Product Design Studio
+            <Sparkles size={14} className="icon-spin" /> Branding & Digital Identity Experts
           </motion.div>
 
           <motion.h2 className="mainTitle" variants={itemVariants}>
-            We build <span className="text-gradient">products</span> that define markets
+            We build <span className="text-gradient">brands</span> that stand out in <span style={{color:"#ff5722"}}>Hyderabad</span>
           </motion.h2>
 
           <motion.p className="description" variants={itemVariants}>
-            From zero to launch, we partner with ambitious tech teams to design, validate, and ship products users actually want.
+            At <span style={{color:"#ff5722"}}>VBLP Tech Solutions Pvt. Ltd.</span>, we provide <span style={{color:"#ff5722"}}>professional branding services</span> in <span style={{color:"#ff5722"}}>Hyderabad</span> including <strong>logo design, brochure design, motion graphics, animation, and complete digital branding solutions.</strong> From concept to execution, we help businesses create powerful brand identities that build trust, attract customers, and drive long-term growth.
           </motion.p>
 
           <div className="featuresGrid">
@@ -138,7 +139,7 @@ const AboutStudio = () => {
                 style={{ textDecoration: 'none' }}
               >
           <motion.button className="ctaButton" variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <span>View Case Studies</span>
+            <span>Explore Our Branding Work</span>
             <ArrowRight size={20} />
           </motion.button>
           </HashLink>

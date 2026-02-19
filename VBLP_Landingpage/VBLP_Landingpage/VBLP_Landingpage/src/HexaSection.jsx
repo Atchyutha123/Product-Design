@@ -61,29 +61,29 @@ const HexaSection = () => {
   };
 
   const stats = [
-    {
-      icon: <ClockIcon />,
-      title: "40 Hours > 10 Seconds",
-      description: "We analyze your current processes to identify inefficiencies, uncovering opportunities for dramatic time savings you might not know existed."
-    },
-    {
-      icon: <GridIcon />,
-      title: "75+ Custom Solutions",
-      description: "With over 75 successful implementations, we've helped organizations transform complex processes across diverse industries.",
-      countUp: true,
-      end: 75,
-      suffix: "+"
-    },
-    {
-      icon: <HourglassIcon />,
-      title: "99.99% Efficiency Gain",
-      description: "Our solutions are built to create time for truly valuable work. We help transform complex tasks into seamless operations.",
-      countUp: true,
-      end: 99.99,
-      decimals: 2,
-      suffix: "%"
-    }
-  ];
+  {
+    icon: <ClockIcon />,
+    title: "15+ Years Branding Experience",
+    description: "We bring years of experience in creating impactful brand identities that help businesses grow and stand out in competitive markets."
+  },
+  {
+    icon: <GridIcon />,
+    title: "150+ Successful Projects",
+    description: "With over 150 completed branding and digital projects, we have helped startups and enterprises establish a strong visual identity.",
+    countUp: true,
+    end: 150,
+    suffix: "+"
+  },
+  {
+    icon: <HourglassIcon />,
+    title: "100% Client Satisfaction",
+    description: "Our commitment to creativity, strategy, and quality ensures every client receives branding solutions that deliver measurable results.",
+    countUp: true,
+    end: 100,
+    suffix: "%"
+  }
+];
+
 
   return (
     <section className="hexapart1" ref={ref}>
@@ -111,15 +111,14 @@ const HexaSection = () => {
       >
         {/* Headline */}
         <motion.h1 className="hexapart2-title" variants={itemVariants}>
-          What if you could<br />
-          transform <span className="hexapart2-highlight">weeks of work</span><br />
-          <span className="hexapart2-highlight">into minutes?</span>
+          Why choose the <br />
+          <span className="hexapart2-highlight">Best Branding Agency</span><br /> in 
+          <span className="hexapart2-highlight">Hyderabad?</span>
         </motion.h1>
 
         {/* Subtitle */}
         <motion.p className="hexapart2-subtitle" variants={itemVariants}>
-          VBLP Tech Solutions Pvt. Ltd. partners with forward-thinking leaders to create<br />
-          solutions that eliminate repetitive tasks and unlock new opportunities.
+          <span style={{color:"#ff5722"}}>VBLP Tech Solutions Pvt. Ltd.</span> delivers professional branding services in <span style={{color:"#ff5722"}}>Hyderabad</span>, helping businesses build strong brand identities through <strong>logo design, brochure design, motion graphics, and complete digital branding solutions.</strong>
         </motion.p>
 
         {/* Stats Grid */}

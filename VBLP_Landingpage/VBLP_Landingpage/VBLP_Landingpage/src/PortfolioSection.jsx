@@ -2,22 +2,22 @@ import React, { useState, useEffect, useRef } from 'react';
 import { HashLink } from "react-router-hash-link";
 import { motion, AnimatePresence } from 'framer-motion';
 import "./PortfolioSection.css"
-import p1 from "../public/p1.jpeg";
-import p2 from "../public/p2.jpeg";
-import p3 from "../public/p3.jpeg";
-import p4 from "../public/p4.jpeg";
-import p5 from "../public/p5.jpeg";
-import p6 from "../public/p6.jpeg";
-import p7 from "../public/p7.jpeg";
-import p8 from "../public/p8.jpeg";
-import p9 from "../public/p9.jpeg";
-import p10 from "../public/p10.jpeg";
-import p11 from "../public/p11.jpeg";
-import p13 from "../public/p13.jpeg";
-import p14 from "../public/p14.jpeg";
-import p15 from "../public/p15.jpeg";
-import p16 from "../public/p16.jpeg";
-import p17 from "../public/p17.jpeg";
+import p1 from "../public/vblpp1.jpeg";
+import p2 from "../public/vblpp2.jpeg";
+import p3 from "../public/vblpp3.jpeg";
+import p4 from "../public/vblpp4.jpeg";
+import p5 from "../public/vblpp5.jpeg";
+import p6 from "../public/vblpp6.jpeg";
+import p7 from "../public/vblpp7.jpeg";
+import p8 from "../public/vblpp8.jpeg";
+import p9 from "../public/vblpp9.jpeg";
+import p10 from "../public/vblpp10.jpeg";
+import p11 from "../public/vblpp11.jpeg";
+import p13 from "../public/vblpp13.jpeg";
+import p14 from "../public/vblpp14.jpeg";
+import p15 from "../public/vblpp15.jpeg";
+import p16 from "../public/vblpp16.jpeg";
+import p17 from "../public/vblpp17.jpeg";
 
 const PortfolioSection = () => {
   const [filter, setFilter] = useState('all');
@@ -51,32 +51,49 @@ const PortfolioSection = () => {
   }, []);
 
   const portfolioItems = [
-    { id: 1, image: p1, category: "social", title: "Luxury Villa", description: "Modern architectural visualization" },
-    { id: 2, image: p2, category: "realestate", title: "Brand Campaign", description: "Social media marketing design" },
-    { id: 3, image: p3, category: "brochure", title: "Annual Report", description: "Corporate brochure design" },
-    { id: 4, image: p4, category: "3d", title: "Product Render", description: "3D product visualization" },
-    { id: 5, image: p5, category: "logo", title: "Identity Design", description: "Brand identity system" },
-    { id: 6, image: p6, category: "brochure", title: "Travel Guide", description: "Tourism brochure layout" },
-    { id: 7, image: p7, category: "social", title: "Instagram Series", description: "Social content creation" },
-    { id: 8, image: p8, category: "brochure", title: "Modern Apartment", description: "Interior design showcase" },
-    { id: 9, image: p9, category: "logo", title: "Tech Startup", description: "Logo and brand guidelines" },
-    { id: 10, image: p10, category: "3d", title: "Architecture Viz", description: "3D architectural rendering" },
-    { id: 11, image: p11, category: "social", title: "Marketing Kit", description: "Complete marketing materials" },
-    { id: 13, image: p13, category: "brochure", title: "Modern Apartment", description: "Interior design showcase" },
-    { id: 14, image: p14, category: "brochure", title: "Study", description: "Interior design showcase" },
-    { id: 15, image: p15, category: "brochure", title: "Study", description: "Interior design showcase" },
-    { id: 16, image: p16, category: "brochure", title: "Marketing", description: "Interior design showcase" },
-    { id: 17, image: p17, category: "brochure", title: "Study", description: "Interior design showcase" },
-  ];
+  { id: 1, image: p1, category: "realestate", title: "Real Estate Branding Project", description: "Complete branding services for a luxury real estate company in Hyderabad." },
+  
+  { id: 2, image: p2, category: "social", title: "Digital Branding Campaign", description: "Social media branding strategy designed to boost online visibility." },
+  
+  { id: 3, image: p3, category: "brochure", title: "Corporate Brochure Design", description: "Professional brochure design created for brand communication and marketing." },
+  
+  { id: 4, image: p4, category: "3d", title: "3D Product Branding", description: "3D visualization and motion design for modern product branding." },
+  
+  { id: 5, image: p5, category: "logo", title: "Logo Design for Startup", description: "Creative logo design services delivered by the best branding agency in Hyderabad." },
+  
+  { id: 6, image: p6, category: "brochure", title: "Business Brochure Layout", description: "Modern brochure layout design for corporate branding." },
+  
+  { id: 7, image: p7, category: "social", title: "Instagram Branding Series", description: "Digital branding services focused on social media growth." },
+  
+  { id: 8, image: p8, category: "realestate", title: "Interior Branding Showcase", description: "Real estate branding and marketing materials designed for Hyderabad clients." },
+  
+  { id: 9, image: p9, category: "logo", title: "Technology Brand Identity", description: "Complete logo and brand identity system development." },
+  
+  { id: 10, image: p10, category: "3d", title: "Architectural 3D Branding", description: "Advanced 3D animation and branding visualization services." },
+  
+  { id: 11, image: p11, category: "social", title: "Marketing Branding Kit", description: "Full digital branding package for business marketing." },
+  
+  { id: 13, image: p13, category: "brochure", title: "Corporate Presentation Design", description: "High-impact brochure and presentation design services." },
+  
+  { id: 14, image: p14, category: "brochure", title: "Educational Branding Material", description: "Creative branding solutions for institutional marketing." },
+  
+  { id: 15, image: p15, category: "brochure", title: "Product Branding Brochure", description: "Professional brochure design for product branding campaigns." },
+  
+  { id: 16, image: p16, category: "social", title: "Social Media Marketing Design", description: "Digital branding and promotional content design." },
+  
+  { id: 17, image: p17, category: "brochure", title: "Corporate Branding Design", description: "Strategic branding services tailored for Hyderabad businesses." },
+];
+
 
   const categories = [
-    { id: "all", label: "All Works" },
-    { id: "social", label: "Social Media" },
-    { id: "brochure", label: "Brochures" },
-    { id: "realestate", label: "Real Estate" },
-    { id: "logo", label: "Branding" },
-    { id: "3d", label: "3D Design" },
-  ];
+  { id: "all", label: "All Branding Projects" },
+  { id: "social", label: "Digital Branding" },
+  { id: "brochure", label: "Brochure Design" },
+  { id: "realestate", label: "Real Estate Branding" },
+  { id: "logo", label: "Logo Design" },
+  { id: "3d", label: "3D & Motion Design" },
+];
+
   
   const filtered = filter === 'all' 
     ? portfolioItems 
@@ -271,14 +288,14 @@ const PortfolioSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
         >
-          Portfolio
+          Our Branding Portfolio
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          Creative Works
+          Best Branding Services in Hyderabad – Our Work
         </motion.h2>
         <motion.p 
           className="header-description"
@@ -286,7 +303,7 @@ const PortfolioSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          Explore our collection of stunning visual stories and artistic expressions
+          Explore the creative projects delivered by <span style={{color:"#ff5722"}}>VBLP Tech Solutions Pvt. Ltd.</span>, the best branding agency in <span style={{color:"#ff5722"}}>Hyderabad</span>, showcasing <strong>logo design, brochure design, motion graphics, and digital branding solutions</strong>.
         </motion.p>
         <motion.div 
           className="header-line"
@@ -446,7 +463,7 @@ const PortfolioSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9 }}
         >
-          Have a project in mind?
+          Looking for the Best Branding Agency in <span style={{color: '#f59e0b'}}>Hyderabad</span>?
         </motion.p>
         <HashLink 
           smooth 
@@ -465,7 +482,7 @@ const PortfolioSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
         >
-          Let's Work Together
+          Start Your Branding Project
           <motion.div className="btn-shine" />
         </motion.button>
         </HashLink>

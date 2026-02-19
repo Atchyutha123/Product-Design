@@ -126,10 +126,10 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className="hero-title">
-            Complete Branding Services for a Stronger Identity
+            Best Branding Agency in <span style={{color:"#ff5722"}}>Hyderabad</span>
           </h1>
           <p className="hero-subtitle">
-            At VBLP Tech Solutions Pvt. Ltd., we help you build a memorable brand identity from the ground up. From logo design to motion graphics, digital strategy, and beyond—our expert team delivers visual consistency and marketing clarity across every touchpoint.
+            <span style={{color:"#ff5722"}}>VBLP Tech Solutions Pvt. Ltd.</span> is a leading branding agency in <span style={{color:"#ff5722"}}>Hyderabad</span> offering professional <strong>logo design, brochure design, motion graphics, animation, website branding, and complete digital branding services.</strong> We create powerful brand identities that help businesses stand out, attract customers, and grow faster in a competitive market.
           </p>
           
           <div className="hero-buttons">
