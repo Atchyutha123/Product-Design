@@ -18,13 +18,20 @@ import p14 from "../public/vblpp14.jpeg";
 import p15 from "../public/vblpp15.jpeg";
 import p16 from "../public/vblpp16.jpeg";
 import p17 from "../public/vblpp17.jpeg";
+import p18 from "../public/vblpp18.jpeg";
+import p19 from "../public/vblpp19.jpeg";
+import p20 from "../public/vblpp20.jpeg";
+import p21 from "../public/vblpp21.jpeg";
+import p22 from "../public/vblpp22.jpeg";
+import p23 from "../public/vblpp23.jpeg";
+import p24 from "../public/vblpp24.jpeg";
+import p25 from "../public/vblpp25.jpeg";
+import p26 from "../public/vblpp26.jpeg";
 
 const PortfolioSection = () => {
   const [filter, setFilter] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [loadedImages, setLoadedImages] = useState(new Set());
   const [imageLoadingStates, setImageLoadingStates] = useState({});
   const imageRefs = useRef({});
 
@@ -36,7 +43,6 @@ const PortfolioSection = () => {
           const img = new Image();
           img.src = item.image;
           img.onload = () => {
-            setLoadedImages(prev => new Set([...prev, item.id]));
             resolve(item.id);
           };
           img.onerror = () => resolve(item.id);
@@ -51,71 +57,55 @@ const PortfolioSection = () => {
   }, []);
 
   const portfolioItems = [
-  { id: 1, image: p1, category: "realestate", title: "Real Estate Branding Project", description: "Complete branding services for a luxury real estate company in Hyderabad." },
-  
-  { id: 2, image: p2, category: "social", title: "Digital Branding Campaign", description: "Social media branding strategy designed to boost online visibility." },
-  
-  { id: 3, image: p3, category: "brochure", title: "Corporate Brochure Design", description: "Professional brochure design created for brand communication and marketing." },
-  
-  { id: 4, image: p4, category: "3d", title: "3D Product Branding", description: "3D visualization and motion design for modern product branding." },
-  
-  { id: 5, image: p5, category: "logo", title: "Logo Design for Startup", description: "Creative logo design services delivered by the best branding agency in Hyderabad." },
-  
-  { id: 6, image: p6, category: "brochure", title: "Business Brochure Layout", description: "Modern brochure layout design for corporate branding." },
-  
-  { id: 7, image: p7, category: "social", title: "Instagram Branding Series", description: "Digital branding services focused on social media growth." },
-  
-  { id: 8, image: p8, category: "realestate", title: "Interior Branding Showcase", description: "Real estate branding and marketing materials designed for Hyderabad clients." },
-  
-  { id: 9, image: p9, category: "logo", title: "Technology Brand Identity", description: "Complete logo and brand identity system development." },
-  
-  { id: 10, image: p10, category: "3d", title: "Architectural 3D Branding", description: "Advanced 3D animation and branding visualization services." },
-  
-  { id: 11, image: p11, category: "social", title: "Marketing Branding Kit", description: "Full digital branding package for business marketing." },
-  
-  { id: 13, image: p13, category: "brochure", title: "Corporate Presentation Design", description: "High-impact brochure and presentation design services." },
-  
-  { id: 14, image: p14, category: "brochure", title: "Educational Branding Material", description: "Creative branding solutions for institutional marketing." },
-  
-  { id: 15, image: p15, category: "brochure", title: "Product Branding Brochure", description: "Professional brochure design for product branding campaigns." },
-  
-  { id: 16, image: p16, category: "social", title: "Social Media Marketing Design", description: "Digital branding and promotional content design." },
-  
-  { id: 17, image: p17, category: "brochure", title: "Corporate Branding Design", description: "Strategic branding services tailored for Hyderabad businesses." },
-];
-
+    { id: 1, image: p1, category: "social", title: "Real Estate Branding Project", description: "Complete branding services for a luxury real estate company in Hyderabad." },
+    { id: 2, image: p2, category: "realestate", title: "Digital Branding Campaign", description: "Social media branding strategy designed to boost online visibility." },
+    { id: 3, image: p3, category: "brochure", title: "Corporate Brochure Design", description: "Professional brochure design created for brand communication and marketing." },
+    { id: 4, image: p4, category: "3d", title: "3D Product Branding", description: "3D visualization and motion design for modern product branding." },
+    { id: 5, image: p5, category: "logo", title: "Logo Design for Startup", description: "Creative logo design services delivered by the best branding agency in Hyderabad." },
+    { id: 6, image: p6, category: "brochure", title: "Business Brochure Layout", description: "Modern brochure layout design for corporate branding." },
+    { id: 7, image: p7, category: "social", title: "Instagram Branding Series", description: "Digital branding services focused on social media growth." },
+    { id: 8, image: p8, category: "realestate", title: "Interior Branding Showcase", description: "Real estate branding and marketing materials designed for Hyderabad clients." },
+    { id: 9, image: p9, category: "logo", title: "Technology Brand Identity", description: "Complete logo and brand identity system development." },
+    { id: 10, image: p10, category: "logo", title: "Architectural 3D Branding", description: "Advanced 3D animation and branding visualization services." },
+    { id: 11, image: p11, category: "brochure", title: "Marketing Branding Kit", description: "Full digital branding package for business marketing." },
+    { id: 13, image: p13, category: "brochure", title: "Corporate Presentation Design", description: "High-impact brochure and presentation design services." },
+    { id: 14, image: p14, category: "brochure", title: "Educational Branding Material", description: "Creative branding solutions for institutional marketing." },
+    { id: 15, image: p15, category: "brochure", title: "Product Branding Brochure", description: "Professional brochure design for product branding campaigns." },
+    { id: 16, image: p16, category: "social", title: "Social Media Marketing Design", description: "Digital branding and promotional content design." },
+    { id: 17, image: p17, category: "brochure", title: "Corporate Branding Design", description: "Strategic branding services tailored for Hyderabad businesses." },
+    { id: 18, image: p18, category: "social", title: "Social Media Branding Campaign", description: "Complete social media branding and campaign design." },
+    { id: 19, image: p19, category: "social", title: "Social Media Branding Campaign", description: "Complete social media branding and campaign design." },
+    { id: 20, image: p20, category: "logo", title: "Corporate Brand Identity", description: "Complete logo and brand identity system development." },
+    { id: 21, image: p21, category: "social", title: "Social Media Branding Campaign", description: "Complete social media branding and campaign design." },
+    { id: 22, image: p22, category: "social", title: "Social Media Branding Campaign", description: "Complete social media branding and campaign design." },
+    { id: 23, image: p23, category: "social", title: "Social Media Branding Campaign", description: "Complete social media branding and campaign design." },
+    { id: 24, image: p24, category: "social", title: "Social Media Branding Campaign", description: "Complete social media branding and campaign design." },
+    { id: 25, image: p25, category: "social", title: "Social Media Branding Campaign", description: "Complete social media branding and campaign design." },
+    { id: 26, image: p26, category: "brochure", title: "Corporate Branding Design", description: "Strategic branding services tailored for Hyderabad businesses." },
+  ];
 
   const categories = [
-  { id: "all", label: "All Branding Projects" },
-  { id: "social", label: "Digital Branding" },
-  { id: "brochure", label: "Brochure Design" },
-  { id: "realestate", label: "Real Estate Branding" },
-  { id: "logo", label: "Logo Design" },
-  { id: "3d", label: "3D & Motion Design" },
-];
+    { id: "all", label: "All Branding Projects" },
+    { id: "social", label: "Digital Branding" },
+    { id: "brochure", label: "Brochure Design" },
+    { id: "realestate", label: "Real Estate Branding" },
+    { id: "logo", label: "Logo Design" },
+    { id: "3d", label: "3D & Motion Design" },
+  ];
 
-  
   const filtered = filter === 'all' 
     ? portfolioItems 
     : portfolioItems.filter(item => item.category === filter);
 
-  const openModal = (item, index) => {
+  // Simplified openModal - just set the selected image
+  const openModal = (item) => {
     setSelectedImage(item);
-    setCurrentIndex(index);
     document.body.style.overflow = 'hidden';
   };
 
   const closeModal = () => {
     setSelectedImage(null);
     document.body.style.overflow = 'unset';
-  };
-
-  const navigateImage = (direction) => {
-    const newIndex = direction === 'next' 
-      ? (currentIndex + 1) % filtered.length
-      : (currentIndex - 1 + filtered.length) % filtered.length;
-    setCurrentIndex(newIndex);
-    setSelectedImage(filtered[newIndex]);
   };
 
   const handleImageLoad = (id) => {
@@ -131,39 +121,6 @@ const PortfolioSection = () => {
         staggerChildren: 0.1,
         delayChildren: 0.2,
         ease: "easeOut"
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { 
-      opacity: 0,
-      y: 60,
-      scale: 0.85,
-      rotateY: -15
-    },
-    visible: { 
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      rotateY: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 20,
-        duration: 0.8,
-        ease: "easeOut"
-      }
-    },
-    hover: {
-      y: -15,
-      scale: 1.03,
-      rotateY: 5,
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 25,
-        duration: 0.4
       }
     }
   };
@@ -210,22 +167,6 @@ const PortfolioSection = () => {
       }
     };
   };
-
-  // Skeleton loader component
-  const SkeletonLoader = () => (
-    <motion.div 
-      className="skeleton-loader"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <div className="skeleton-image"></div>
-      <div className="skeleton-text">
-        <div className="skeleton-line"></div>
-        <div className="skeleton-line short"></div>
-      </div>
-    </motion.div>
-  );
 
   return (
     <section className="portfolio">
@@ -363,7 +304,7 @@ const PortfolioSection = () => {
               variants={getCardAnimation(index)}
               whileHover="hover"
               layout
-              onClick={() => openModal(item, index)}
+              onClick={() => openModal(item)}
             >
               <div className="card-border"></div>
               <div className="card-image-wrapper">
@@ -468,27 +409,26 @@ const PortfolioSection = () => {
         <HashLink 
           smooth 
           to="#contact" 
-          // onClick={onClose} 
           style={{ textDecoration: 'none' }}
         >
-        <motion.button 
-          className="cta-btn"
-          whileHover={{ 
-            scale: 1.05,
-            boxShadow: "0 10px 30px rgba(0,0,0,0.2)"
-          }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-        >
-          Start Your Branding Project
-          <motion.div className="btn-shine" />
-        </motion.button>
+          <motion.button 
+            className="cta-btn"
+            whileHover={{ 
+              scale: 1.05,
+              boxShadow: "0 10px 30px rgba(0,0,0,0.2)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+          >
+            Start Your Branding Project
+            <motion.div className="btn-shine" />
+          </motion.button>
         </HashLink>
       </motion.div>
 
-      {/* Enhanced Modal */}
+      {/* Enhanced Modal - Single Image Only (No Navigation) */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div 
@@ -524,38 +464,6 @@ const PortfolioSection = () => {
                   <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
               </motion.button>
-
-              {/* Enhanced Navigation arrows */}
-              {filtered.length > 1 && (
-                <>
-                  <motion.button 
-                    className="nav-arrow nav-prev"
-                    onClick={() => navigateImage('prev')}
-                    whileHover={{ x: -8, scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                  </motion.button>
-                  <motion.button 
-                    className="nav-arrow nav-next"
-                    onClick={() => navigateImage('next')}
-                    whileHover={{ x: 8, scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    initial={{ x: 20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                  </motion.button>
-                </>
-              )}
 
               {/* Enhanced Image */}
               <motion.div 
@@ -602,14 +510,6 @@ const PortfolioSection = () => {
                 >
                   {selectedImage.description}
                 </motion.p>
-                <motion.div 
-                  className="modal-counter"
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  {currentIndex + 1} / {filtered.length}
-                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>
