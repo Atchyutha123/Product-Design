@@ -9,7 +9,9 @@ import Serivces from './ServicesLanding'
 import Hexa from './HexaSection'
 import Faqs from './Faqs';
 import ExitIntentPopup from './ExitIntentPopup';
-import PortfolioSection from './Portfoliosection';
+import Portfoliosection from './Portfoliosection';
+
+
 
 function MainC() {
   return (
@@ -28,7 +30,7 @@ function MainC() {
         {/* <ResonanceStudio/> */}
     </section>
     <section id="projects">
-        <PortfolioSection/>
+        <Portfoliosection/>
         <Testimonial/>
         <Faqs/>
     </section>
