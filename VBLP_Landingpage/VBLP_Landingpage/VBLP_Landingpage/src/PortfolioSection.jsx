@@ -36,7 +36,7 @@ import p30 from "../public/vblpp30.jpg";
 import p31 from "../public/vblpp31.png";
 import p32 from "../public/vblpp32.png";
 
-const PortfolioSection = () => {
+const Portfoliosection = () => {
   const [filter, setFilter] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
   const [visibleImages, setVisibleImages] = useState(new Set());
@@ -537,4 +537,4 @@ const PortfolioSection = () => {
   );
 };
 
-export default PortfolioSection;
+export default Portfoliosection;

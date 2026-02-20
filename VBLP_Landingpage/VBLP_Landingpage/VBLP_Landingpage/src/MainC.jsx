@@ -3,12 +3,13 @@ import HeroStackedImages from './HeroStackedImages';
 import AboutStudio from './AboutStudio';
 import ResonanceStudio from './ResonanceStudio'
 import Contact from './ContactPart1'
-import PortfolioSection from './Portfoliosection';
+
 import Testimonial from './TestimonialCarousel';
 import Serivces from './ServicesLanding'
 import Hexa from './HexaSection'
 import Faqs from './Faqs';
 import ExitIntentPopup from './ExitIntentPopup';
+import PortfolioSection from './Portfoliosection';
 
 function MainC() {
   return (
