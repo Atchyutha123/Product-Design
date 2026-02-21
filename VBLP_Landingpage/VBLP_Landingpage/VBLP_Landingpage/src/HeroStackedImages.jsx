@@ -77,7 +77,7 @@ const TrialForm = () => {
           <label>Phone No.</label>
           <div className="input-wrapper">
             <Phone size={18} className="input-icon" />
-            <input type="tel" placeholder="+12 12458 854" required />
+            <input type="tel" placeholder="+91 12458 854" required />
           </div>
         </div>
 

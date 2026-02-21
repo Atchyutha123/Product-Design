@@ -1,0 +1,312 @@
+:root {
+  --primary-yellow: #f4d03f;
+  --dark: #0a0a0a;
+  --light-bg: #fdfdfd;
+  --card-bg: #ffffff;
+  --border-color: #f0f0f0;
+}
+
+.aboutSection {
+  background-color: var(--light-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 5%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- LEFT SIDE: VISUAL AREA --- */
+.visualArea {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px; /* Base height for desktop */
+}
+
+.visualContentWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbit-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.orbit-path {
+  width: 350px;
+  height: 350px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+}
+
+/* Bubbles Styles */
+.bubblesContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  cursor: grab;
+}
+
+.b-dev { width: 130px; height: 130px; background: white; border: 1px solid var(--dark); top: 10%; left: 10%; }
+.b-web { width: 170px; height: 170px; background: var(--dark); color: white; top: 25%; right: 5%; }
+.b-mobile { width: 140px; height: 140px; background: var(--primary-yellow); bottom: 10%; left: 15%; }
+
+/* Image Preview Styles (The core fix) */
+.imagePreview {
+  position: absolute;
+  z-index: 10;
+  width: 90%; /* Responsive width */
+  max-width: 400px;
+  aspect-ratio: 4 / 3;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  border: 5px solid white;
+}
+
+.imagePreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- RIGHT SIDE: CONTENT AREA --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.mainTitle {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--dark), var(--primary-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.featureCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  background: #fdfae9;
+  border-color: var(--primary-yellow);
+}
+
+.featureIcon {
+  background: var(--dark);
+  color: white;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.featureText {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: var(--dark);
+  color: white;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #ff5722;
+}
+
+/* Decorative Stickers */
+.sticker { position: absolute; pointer-events: none; opacity: 0.4; }
+.s1 { top: 5%; left: 5%; font-size: 3rem; color: var(--primary-yellow); }
+
+/* --- RESPONSIVENESS --- */
+
+/* Tablets / Small Laptops */
+@media (max-width: 1024px) {
+  .mainTitle { font-size: 2.5rem; }
+  .orbit-path { width: 300px; height: 300px; }
+  .b-web { width: 140px; height: 140px; }
+  .b-dev { width: 110px; height: 110px; }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .aboutSection { padding: 60px 20px; }
+  
+  .aboutContainer {
+    grid-template-columns: 1fr; /* Stack vertically */
+    gap: 40px;
+    text-align: center;
+  }
+
+  .visualArea {
+    order: 1; /* Move visual above text on mobile */
+    height: 350px;
+  }
+
+  .contentArea {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .mainTitle { font-size: 2.2rem; }
+  
+  .orbit-path { width: 250px; height: 250px; }
+  
+  .bubble { font-size: 0.75rem; }
+  .b-web { width: 120px; height: 120px; top: 20%; right: 10%; }
+  .b-dev { width: 90px; height: 90px; }
+  .b-mobile { width: 100px; height: 100px; }
+
+  .imagePreview {
+    width: 85%;
+  }
+}
+
+/* Smallest Mobile Sizes */
+@media (max-width: 480px) {
+  .mainTitle { font-size: 1.8rem; }
+  .visualArea { height: 300px; }
+  .orbit-path { width: 200px; height: 200px; }
+}
+
+/* New Background Enhancements */
+.aboutSection {
+  /* Soft Mesh Gradient: Creates a studio lighting effect */
+  background: 
+    radial-gradient(at 0% 0%, rgba(244, 208, 63, 0.07) 0px, transparent 50%), 
+    radial-gradient(at 100% 0%, rgba(10, 10, 10, 0.03) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(244, 208, 63, 0.05) 0px, transparent 50%),
+    var(--light-bg);
+  position: relative;
+}
+
+/* Subtle Animated Glow behind the Orbit Area */
+.visualArea::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(244, 208, 63, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: -1;
+  animation: pulseGlow 8s infinite ease-in-out;
+}
+
+/* Extra decorative glass element for depth */
+.aboutContainer::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(244, 208, 63, 0.05) 0%, transparent 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  filter: blur(60px);
+  z-index: -1;
+  animation: morphShape 15s infinite linear;
+}
+
+/* Animations for the background depth */
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+@keyframes morphShape {
+  0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+  33% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+  66% { border-radius: 30% 70% 70% 30% / 50% 40% 30% 60%; }
+  100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+}
+
+/* Ensure the background stickers don't get lost */
+.s1 {
+  filter: drop-shadow(0 0 10px rgba(244, 208, 63, 0.4));
+  opacity: 0.6;
+}

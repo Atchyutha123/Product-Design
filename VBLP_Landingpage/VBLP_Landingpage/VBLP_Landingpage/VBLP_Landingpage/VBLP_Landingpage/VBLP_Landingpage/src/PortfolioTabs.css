@@ -1,0 +1,302 @@
+/* ====== WRAPPER ====== */
+.portfolio-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 20px 56px;
+  background: radial-gradient(circle at top, #f5f7fb 0, #ffffff 55%);
+}
+
+/* ====== TABS NAVBAR (pill style) ====== */
+.portfolio-section .tabs-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  width: 100%;
+  transition: padding-bottom 0.25s ease, margin-bottom 0.25s ease;
+}
+
+.portfolio-section .tabs-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: #f4f5f7;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.35);
+  transition: box-shadow 0.3s ease, background 0.3s ease, transform 0.3s ease;
+  position: relative;
+  overflow: hidden; /* always clip the blue pill + shadow */
+}
+
+/* subtle lift when hovering the whole nav */
+.portfolio-section .tabs-nav:hover .tabs-pill {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Single tab */
+.portfolio-section .tab {
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 999px;
+
+  /* ⬇️ more vertical padding = more color above/below text */
+  padding: 11px 24px; /* was 8px 22px */
+  line-height: 1.4; /* optional, makes it feel a bit airier */
+
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: color 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-section .tab:hover {
+  color: #111827;
+}
+
+/* Active tab text; background handled by .tab-highlight */
+.portfolio-section .tab.active {
+  color: #ffffff;
+  transform: translateY(-1px);
+
+  /* 🔵 add the gradient + shadow here */
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35);
+}
+
+/* ====== MOVING GRADIENT HIGHLIGHT ====== */
+.portfolio-section .tab-highlight {
+  position: absolute;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2563eb, #06b6d4);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35);
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+
+  transition: left 0.3s ease, top 0.3s ease, width 0.3s ease, height 0.3s ease,
+    opacity 0.18s ease;
+}
+
+.portfolio-section .tabs-pill.has-active .tab-highlight {
+  opacity: 1;
+}
+
+/* ====== CARDS GRID ====== */
+.portfolio-section .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 26px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  animation: cardsIn 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes cardsIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== CARD ====== */
+.portfolio-section .card {
+  padding: 1px; /* for gradient border */
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(37, 99, 235, 0.4),
+    rgba(14, 165, 233, 0.15)
+  );
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+
+.portfolio-section .card-inner {
+  background: #ffffff;
+  border-radius: 17px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Lift + subtle tilt on hover */
+.portfolio-section .card:hover {
+  transform: translateY(-8px) translateZ(0) rotate3d(0.2, 0.6, 0, 0.4deg);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.18);
+  background: linear-gradient(
+    145deg,
+    rgba(37, 99, 235, 0.65),
+    rgba(14, 165, 233, 0.25)
+  );
+}
+
+/* ====== IMAGE AREA ====== */
+.portfolio-section .card-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-height: 230px;
+}
+
+.portfolio-section .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.5s ease;
+}
+
+.portfolio-section .card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.65),
+    rgba(15, 23, 42, 0.05)
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 14px 16px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-section .card-img-overlay span {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.7);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+/* Image hover behavior */
+.portfolio-section .card:hover .card-img {
+  transform: scale(1.08);
+}
+
+.portfolio-section .card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+/* ====== CARD CONTENT ====== */
+.portfolio-section .card-body {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  transition: transform 0.25s ease;
+}
+
+.portfolio-section .card:hover .card-body {
+  transform: translateY(2px);
+}
+
+/* Tag pill */
+.portfolio-section .card-pill {
+  align-self: flex-start;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  color: #1d4ed8;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.portfolio-section .card-title {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Description */
+.portfolio-section .card-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* ====== RESPONSIVE (TABLET <= 768px) ====== */
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding-top: 36px;
+  }
+
+  .portfolio-section .tabs-nav {
+    justify-content: center;
+    overflow: visible;
+    padding-bottom: 6px;
+  }
+
+  .portfolio-section .tabs-pill {
+    margin: 0;
+  }
+
+  .portfolio-section .tab {
+    padding: 8px 18px;
+    font-size: 0.92rem;
+  }
+
+  .portfolio-section .card-img-wrapper {
+    max-height: 210px;
+  }
+}
+
+/* ====== RESPONSIVE (MOBILE < 550px WITH 2-COLUMN TABS) ====== */
+@media (max-width: 550px) {
+  .portfolio-section .tabs-nav {
+    justify-content: center;
+    padding-bottom: 12px;
+    overflow: visible;
+  }
+
+  .portfolio-section .tabs-pill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 360px;
+    gap: 8px;
+    padding: 12px;
+    background: #f4f5f7;
+    border-radius: 16px;
+  }
+
+  .portfolio-section .tab {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 30px;
+    width: 100%;
+  }
+}
+
+/* ====== RESPONSIVE (MOBILE GRID) ====== */
+@media (max-width: 480px) {
+  .portfolio-section .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
